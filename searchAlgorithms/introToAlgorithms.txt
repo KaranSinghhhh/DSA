@@ -1,0 +1,61 @@
+Introduction to Algorithms
+Q: What is an algorithm?
+A: An algorithm is a set of steps or instructions for completing a task
+A: In CS, an algorithm is a set of steps to complete a task
+
+Creating an algorithm:
+1. The steps in the algorithm need be be in a very specific order
+2. The steps also need to be distinct
+3. The algorithm should produce a result
+4. The algorithm should complete in a finite amount of time
+
+Efficiency
+- Two measures of efficiency when when it comes to algorithms: Time Complexity & Space Complexity
+- Time Complexity: Measure of how long it takes an algorithm to run
+- Running Time is used to define Time Complexity
+- Space Complexity: Amount of memory taken up on a computer
+- 
+* You could have a fast algorithm but it might not matter if it consumes more memory than you have available
+
+Big O Notation
+- Theoretical definition of the complexity of an algorithm as a function of the size 
+- O(n) is linear time 
+- O(1) is constant time: an operation that does not depend on the size of the input data
+- O(log n) is logarithmic time
+- O(n^2) is quadratic time 
+- O(n^3) is cubic time
+- O(n log n) is quadilinear time
+- O(n^k) is Polynomial runtime
+- O(x^n) is exponential time 
+- O(n!) is factorial time
+
+Linear Search (simple search) algorithm
+- Linear search is a search algorithm
+- Has O(n) time complexity 
+- We have a target and a list in this example case:
+- Example:
+  target = 4
+  list = [1, 2, 3, 4, 5]   *Does not have to be sorted
+  Explaination: Check each element in the list 1 by 1 until the end of list to check if an element matches the target
+- Best case scenario for linear search is if the target is in the beginning of the list
+- Worst case scenario for linear search is if the target is in end of the list
+
+Binary Search
+- Binary Search is a search algorithm
+- The time complexity for binary search is O(log n)
+- The space complexity for binary search is O(1) because it is iterative
+- * The time complexity for recursive binary search is O(log n)
+- * The space complexity of recursive binary search is O(log n)
+- As n in increases, the number of tries, eventually starts to flatten out which is why its logarithmic
+- With binary search, the list or array has to be sorted
+- We have a target and a list in this example case:
+- Example: 
+  target = 2
+  list= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  1. Binary search starts in the middle element which is 5, if it is equal to the target, return the index, but it is not in this case
+  2. If the middle element is greater than the target, we can remove all elements greater than 5 but we keep 5
+  3. Now the list is: List = [1, 2, 3, 4, 5]
+  4. The middle element is now 3, if it is equal to the target, return the index, but it is not in this case
+  5. If the middle element is greater than the target, we can remove all elements greater than 3 but we keep 3
+  6. Now the list is: List = [1, 2, 3]
+  7. The middle element is now 2, if it is equal to the target, return it, in this case it is so we return the index
